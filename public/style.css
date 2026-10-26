@@ -79,3 +79,4 @@ footer{max-width:980px;margin:auto;padding:28px 22px 48px;color:var(--mute);font
 .tag{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:-.12px;color:var(--mute);background:var(--line);border-radius:980px;padding:2px 10px;margin-bottom:12px}
 .projects p{flex:1}
 .more{margin-top:14px;font-size:14px;letter-spacing:-.224px}
+.cards .wide{grid-column:1/-1}
