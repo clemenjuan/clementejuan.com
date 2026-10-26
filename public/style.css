@@ -27,3 +27,9 @@ td:nth-child(2),td:nth-child(3){color:var(--mute)}
 .muted{color:var(--mute)}
 footer{max-width:860px;margin:auto;padding:30px 22px 50px;color:var(--mute);font-size:14px}
 @media (max-width:640px){.hero{flex-direction:column;align-items:flex-start;gap:18px}.links a{display:none}td:nth-child(2){display:none}}
+.emails{display:flex;flex-wrap:wrap;gap:6px 22px;margin:14px 0 0;font-size:15px}
+.email{display:inline-flex;align-items:center;gap:8px}
+.addr{user-select:all;-webkit-user-select:all;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px}
+.copy{background:none;border:1px solid var(--line);color:var(--mute);border-radius:6px;font:12px/1.4 inherit;padding:1px 8px;cursor:pointer}
+.copy:hover{color:var(--fg);border-color:var(--mute)}
+.emails+.social{margin-top:8px}

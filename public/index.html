@@ -35,9 +35,11 @@
     <p class="role">Research Associate &amp; Doctoral Candidate<br>
       <a href="https://www.asg.ed.tum.de/en/sps/">Chair of Spacecraft Systems</a>, Technical University of Munich</p>
     <p class="tagline">Teaching satellites to reason, plan and act on their own.</p>
+    <p class="emails">
+      <span class="email" data-u="clemente.juan" data-d="tum.de"></span>
+      <span class="email" data-u="clementejuanoliver" data-d="gmail.com"></span>
+    </p>
     <p class="social">
-      <a href="#" data-u="clemente.juan" data-d="tum.de" class="mail">TUM email</a>
-      <a href="#" data-u="clementejuanoliver" data-d="gmail.com" class="mail">Personal email</a>
       <a href="https://scholar.google.com/citations?user=o8jY25cAAAAJ&amp;hl=en">Google Scholar</a>
       <a href="https://orcid.org/0009-0006-9860-724X">ORCID</a>
       <a href="https://www.linkedin.com/in/clemente-juan-oliver/">LinkedIn</a>
@@ -101,7 +103,7 @@
     <tr><td>New Space Economy</td><td>Teaching assistant</td><td>Summer 2025</td></tr>
   </table>
   <p class="muted">Interested in a thesis on AI for spacecraft autonomy? See the Chair's
-  <a href="https://www.asg.ed.tum.de/en/sps/">open topics</a> or email me.</p>
+  <a href="https://www.asg.ed.tum.de/en/sps/thesis-projects/">open thesis topics</a> or email me.</p>
 </section>
 
 <section id="ventures">
@@ -118,7 +120,13 @@
 </footer>
 
 <script>
-document.querySelectorAll('a.mail').forEach(a => { const e = a.dataset.u + '@' + a.dataset.d; a.href = 'mailto:' + e; a.title = e; });
+document.querySelectorAll('.email').forEach(s => {
+  const e = s.dataset.u + '@' + s.dataset.d;
+  s.innerHTML = '<span class="addr"></span><button class="copy" type="button" title="Copy">copy</button>';
+  s.querySelector('.addr').textContent = e;
+  const b = s.querySelector('.copy');
+  b.onclick = () => navigator.clipboard.writeText(e).then(() => { b.textContent = 'copied'; setTimeout(() => b.textContent = 'copy', 1500); });
+});
 document.getElementById('y').textContent = new Date().getFullYear();
 const root = document.documentElement, saved = localStorage.getItem('theme');
 if (saved) root.dataset.theme = saved;
