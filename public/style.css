@@ -80,3 +80,4 @@ footer{max-width:980px;margin:auto;padding:28px 22px 48px;color:var(--mute);font
 .projects p{flex:1}
 .more{margin-top:14px;font-size:14px;letter-spacing:-.224px}
 .cards .wide{grid-column:1/-1}
+.ai-note{margin-top:6px;font-size:12px;opacity:.8}
